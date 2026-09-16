@@ -1,0 +1,18 @@
+task,variant,model,hidden_passed,hidden_total,visible_passed,visible_total,visible_tests_modified,requests,input_tokens,cached_tokens,uncached_tokens,output_tokens,reasoning_tokens,wall_seconds,tool_calls
+T0_overhead,claude,gpt-5.6-luna,,,,,,1,22704,0,22704,5,0,12.4,{}
+T0_overhead,codex,gpt-5.6-luna,,,,,,1,6876,0,6876,5,0,15.7,"{""agent_message"": 1}"
+T1_ledger,claude,gpt-5.6-terra,12,12,4,4,,9,185427,163154,22273,1511,186,92.7,"{""Bash"": 5, ""Edit"": 4, ""Read"": 4}"
+T1_ledger,claude-core,gpt-5.6-terra,12,12,4,4,,13,157419,143207,14212,2449,462,95.1,"{""Bash"": 7, ""Edit"": 4, ""Glob"": 1, ""Read"": 6}"
+T1_ledger,codex,gpt-5.6-terra,12,12,4,4,,8,82997,70599,12398,2281,584,59.6,"{""agent_message"": 3, ""command_execution"": 5, ""file_change"": 2}"
+T2_durations,claude,gpt-5.6-terra,9,9,2,2,,7,146071,123120,22951,2931,354,87.7,"{""Bash"": 4, ""Edit"": 2, ""Read"": 4}"
+T2_durations,claude-core,gpt-5.6-terra,9,9,2,2,,6,68147,55445,12702,2186,590,52.9,"{""Bash"": 1, ""Edit"": 1, ""Glob"": 2, ""Read"": 4}"
+T2_durations,codex,gpt-5.6-terra,9,9,2,2,,5,50628,38549,12079,2476,605,49.7,"{""agent_message"": 2, ""command_execution"": 3, ""file_change"": 2}"
+T3_shop,claude,gpt-5.6-terra,11,11,7,7,test_shop.py,12,263367,237972,25395,3101,132,136.6,"{""Bash"": 6, ""Edit"": 6, ""Read"": 11}"
+T3_shop,claude-core,gpt-5.6-terra,11,11,8,8,test_shop.py,10,131197,112699,18498,2644,73,72.3,"{""Bash"": 3, ""Edit"": 8, ""Glob"": 1, ""Read"": 12}"
+T3_shop,codex,gpt-5.6-terra,11,11,6,6,test_shop.py,6,59370,47089,12281,1614,72,42.6,"{""agent_message"": 2, ""command_execution"": 4, ""file_change"": 1}"
+H1_spans,claude,gpt-5.6-terra,29,29,5,5,,7,147895,123648,24247,2935,353,69.7,"{""Bash"": 5, ""Edit"": 2, ""Read"": 4}"
+H1_spans,claude-core,gpt-5.6-terra,29,29,5,5,,7,87343,72548,14795,3421,525,64.0,"{""Bash"": 3, ""Edit"": 1, ""Glob"": 1, ""Read"": 6}"
+H1_spans,codex,gpt-5.6-terra,29,29,5,5,,9,107199,92288,14911,4032,1201,81.2,"{""agent_message"": 3, ""command_execution"": 5, ""file_change"": 2}"
+H2_calc,claude,gpt-5.6-terra,37,37,8,8,test_calc.py,16,392857,363081,29776,7882,2906,217.2,"{""Bash"": 6, ""Edit"": 3, ""Read"": 14, ""Write"": 6}"
+H2_calc,claude-core,gpt-5.6-terra,36,37,8,8,test_calc.py,15,234251,197311,36940,7229,2842,161.7,"{""Bash"": 3, ""Edit"": 1, ""Glob"": 1, ""Read"": 16, ""Write"": 7}"
+H2_calc,codex,gpt-5.6-terra,37,37,7,7,test_calc.py,11,169796,148437,21359,7408,1800,140.0,"{""agent_message"": 4, ""command_execution"": 6, ""file_change"": 3}"

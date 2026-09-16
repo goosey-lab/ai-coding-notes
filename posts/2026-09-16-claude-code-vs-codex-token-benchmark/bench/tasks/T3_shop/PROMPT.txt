@@ -1,0 +1,10 @@
+Add coupon support to the shop package:
+
+1. Add a frozen dataclass `Coupon` to shop/models.py with fields `code: str`, `percent_off: int` and `min_subtotal_cents: int = 0`. `percent_off` must be between 1 and 100 inclusive; otherwise constructing a Coupon raises ValueError.
+2. `Cart.apply_coupon(coupon)` attaches a coupon to the cart. A cart holds at most one coupon: applying another one replaces it. `Cart.remove_coupon()` removes it.
+3. `Cart.discount_cents()` returns `percent_off` percent of the subtotal (the subtotal already includes bulk discounts), rounded down to whole cents. It is 0 when there is no coupon or when the subtotal is below the coupon's `min_subtotal_cents`.
+4. `Cart.total_cents()` returns the subtotal minus the discount.
+5. `report.summary(cart)` adds a line `Coupon <CODE>: -$X.YY` directly before the `Total:` line, but only when the discount is not zero.
+6. Export `Coupon` from the `shop` package.
+
+Existing behaviour and output for carts without a coupon must not change.

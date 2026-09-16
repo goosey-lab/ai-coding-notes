@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Benchmark outputs and local configuration
+meter.jsonl
+results.json
+results.txt
+logs/
+.env
+*.env

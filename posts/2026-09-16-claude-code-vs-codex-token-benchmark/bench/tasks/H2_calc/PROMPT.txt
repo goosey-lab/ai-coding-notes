@@ -1,0 +1,15 @@
+Extend the `calc` package (evaluate is in calc/__init__.py) with the following features:
+
+1. Numbers: besides integers, accept decimals (`3.25`, `.5`, `2.`) and scientific notation (`1e3`, `2.5E-2`). Integer literals evaluate to `int`, all other number literals to `float`. Arithmetic follows Python semantics: `/` is true division and `^` behaves like Python's `**`.
+2. Unary `+` and `-`, which may be repeated (`--3`).
+3. A power operator `^` that is right-associative and binds tighter than unary minus: `2^3^2 == 512`, `-2^2 == -4`, `2^-1 == 0.5`.
+4. Variables: names matching `[A-Za-z_][A-Za-z0-9_]*`, looked up in a new optional argument, `evaluate(text, env=None)`, where `env` is a dict.
+5. Function calls `min(a, b, ...)` and `max(a, b, ...)` (at least one argument) and `abs(x)` (exactly one argument). A name followed by `(` is a function call.
+6. Whitespace is allowed between any two tokens.
+7. Errors: add `ParseError`, `UnknownNameError`, `ArgumentError` and `DivisionByZeroError`, all subclasses of `CalcError`, to calc/errors.py and export them from the `calc` package. Every error raised by `evaluate` must be one of these, with a `position` attribute holding a 0-based index into the original text:
+   - ParseError: the index of the first character of the unexpected character or token, or `len(text)` when the input ends too early (including empty input). Anything left over after a complete expression is unexpected, so `2x` fails at position 1.
+   - UnknownNameError: the index of the first character of the unknown variable or function name.
+   - ArgumentError: the index of the first character of the function name that received the wrong number of arguments.
+   - DivisionByZeroError: the index of the operator (`/` or `^`) whose evaluation divides by zero, e.g. `0 ^ -1` fails at position 2.
+
+Existing behaviour must keep working.
