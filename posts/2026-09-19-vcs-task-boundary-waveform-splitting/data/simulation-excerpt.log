@@ -1,0 +1,18 @@
+# Filtered program output from the final two-case run on 2026-09-19.
+# Only SWITCH/DONE/SIM_PASS/WAVE_CHECK_PASS lines are retained.
+# Time values below are in ps. Tool banners and filesystem paths are omitted.
+SWITCH file=01_task_a.fsdb time=20000 counter=2
+DONE phase=1 time=50000 counter=5
+SWITCH file=02_task_b.fsdb time=50000 counter=5
+DONE phase=2 time=120000 counter=12
+SWITCH file=03_task_c.fsdb time=120000 counter=12
+DONE phase=3 time=160000 counter=16
+SIM_PASS final_counter=16
+SWITCH file=01_task_a.fsdb time=20000 counter=2
+DONE phase=1 time=80000 counter=8
+SWITCH file=02_task_b.fsdb time=80000 counter=8
+DONE phase=2 time=100000 counter=10
+SWITCH file=03_task_c.fsdb time=100000 counter=10
+DONE phase=3 time=190000 counter=19
+SIM_PASS final_counter=19
+WAVE_CHECK_PASS files=8 timestamps=70 signals_per_timestamp=4

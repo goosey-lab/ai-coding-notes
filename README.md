@@ -6,6 +6,7 @@ AI 编程工具的实测记录与技术总结。每篇都尽量写清环境、�
 
 | 日期 | 标题 | 标签 |
 |---|---|---|
+| 2026-09-19 | [VCS 波形分割实测：按任务完成节点切换 FSDB](posts/2026-09-19-vcs-task-boundary-waveform-splitting/README.md) | VCS · Verdi · FSDB · 仿真调试 |
 | 2026-09-16 | [Claude Code vs Codex CLI：同一模型下的效果与 Token 消耗对照实验](posts/2026-09-16-claude-code-vs-codex-token-benchmark/README.md) | Claude Code · Codex CLI · Token 成本 · 对照实验 |
 
 ## 目录约定

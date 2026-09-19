@@ -1,0 +1,9 @@
+case,file,start_ps,end_ps,size_bytes,checked_timestamps,signals,initial_snapshot,reference_match
+case1,00_init.fsdb,0,20000,8541,4,4,PASS,PASS
+case1,01_task_a.fsdb,20000,50000,8600,6,4,PASS,PASS
+case1,02_task_b.fsdb,50000,120000,8674,14,4,PASS,PASS
+case1,03_task_c.fsdb,120000,160000,8835,8,4,PASS,PASS
+case2,00_init.fsdb,0,20000,8541,4,4,PASS,PASS
+case2,01_task_a.fsdb,20000,80000,8620,12,4,PASS,PASS
+case2,02_task_b.fsdb,80000,100000,8647,4,4,PASS,PASS
+case2,03_task_c.fsdb,100000,190000,8847,18,4,PASS,PASS
